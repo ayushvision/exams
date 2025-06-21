@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Scholarship Registration Form</h1>
+        
+        <form action="#" method="POST" enctype="multipart/form-data">
+
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full-name" placeholder="Enter your full name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                <label for="confirm-password">Confirm Password:</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Educational Information</legend>
+                <label for="branch">Select Branch:</label>
+                <select id="branch" name="branch" required>
+                    <option value="">-- Select Branch --</option>
+                    <option value="Emtech">Emtech</option>
+                    <option value="CSE">CSE</option>
+                    <option value="IT">IT</option>
+                    <option value="ETC">ETC</option>
+                    <option value="Civil">Civil</option>
+                    <option value="Mech">Mech</option>
+                </select>
+
+                <label for="ssc-marks">SSC Percentage:</label>
+                <input type="number" id="ssc-marks" name="ssc-marks" placeholder="Enter SSC marks" required>
+
+                <label for="hsc-marks">HSC Percentage:</label>
+                <input type="number" id="hsc-marks" name="hsc-marks" placeholder="Enter HSC marks" required>
+
+                <label for="btech-marks">B.Tech Percentage:</label>
+                <input type="number" id="btech-marks" name="btech-marks" placeholder="Enter B.Tech marks" required>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>Upload Documents</legend>
+                <label for="photo">Upload Photo:</label>
+                <input type="file" id="photo" name="photo" accept="image/*" required>
+
+                <label for="income-certificate">Income Certificate:</label>
+                <input type="file" id="income-certificate" name="income-certificate" required>
+
+                <label for="caste-certificate">Caste Certificate:</label>
+                <input type="file" id="caste-certificate" name="caste-certificate" required>
+            </fieldset>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
