@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SareeHub - Elegant Saree Collection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Hero Section Styling - Luxurious Indian Textile Theme */
+        .hero-gradient {
+            background: linear-gradient(135deg, #7e1a1a, #a83279, #ff8c94);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        /* Card Hover Effect */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            height: 250px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">SareeHub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Collections</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<div class="hero-gradient">
+    <div class="container">
+        <h1 class="display-4">Elegant Saree Collection</h1>
+        <p class="lead">Timeless Beauty Woven in Tradition</p>
+    </div>
+</div>
+
+<!-- Saree Cards Section -->
+<div class="container mt-4">
+    <div class="row g-4">
+
+        <!-- Saree 1 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://shorturl.at/Ehoaz" class="card-img-top" alt="Saree 1">
+                <div class="card-body">
+                    <h5 class="card-title">Banarasi Silk</h5>
+                    <p class="card-text">₹7,999 - Pure silk handcrafted elegance</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sareeModal1">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saree 2 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://shorturl.at/KfWNj" class="card-img-top" alt="Saree 2">
+                <div class="card-body">
+                    <h5 class="card-title">Kanjeevaram Silk</h5>
+                    <p class="card-text">₹12,499 - Royal weaving with gold zari</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sareeModal2">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Saree 3 -->
+        <div class="col-md-4">
+            <div class="card">
+                <img src="https://tinyurl.com/54y6ubd6" class="card-img-top" alt="Saree 3">
+                <div class="card-body">
+                    <h5 class="card-title">Cotton Handloom</h5>
+                    <p class="card-text">₹3,499 - Lightweight & breathable</p>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sareeModal3">View Details</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- More sarees can be added here (4 to 10) -->
+
+    </div>
+</div>
+
+<!-- Modals for Saree Details -->
+<div class="modal fade" id="sareeModal1" tabindex="-1" aria-labelledby="sareeModal1Label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="sareeModal1Label">Banarasi Silk Saree</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Woven with intricate gold thread, this saree captures the rich heritage of Indian craftsmanship.</p>
+                <form>
+                    <div class="mb-3">
+                        <label for="qty1" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="qty1" min="1" value="1">
+                    </div>
+                    <button type="submit" class="btn btn-success">Add to Cart</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-light text-center py-3 mt-5">
+    <p class="mb-0">&copy; 2025 SareeHub. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

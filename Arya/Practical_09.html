@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Prac9 Bootstrap - Fairy Tales</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .carousel-item img {
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .accordion-button {
+      font-weight: 500;
+    }
+    .carousel-caption h5, .carousel-caption p {
+      background: rgba(0, 0, 0, 0.5);
+      display: inline-block;
+      padding: 5px 15px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Fairy Tales</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">About Characters</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Discover More</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="mainCarousel" class="carousel slide mt-3" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+    </div>
+
+    <div class="carousel-inner container" style="max-width: 1140px;">
+      <div class="carousel-item active">
+        <img src="https://laughingsquid.com/wp-content/uploads/2016/02/cind.jpg" class="d-block w-100 img-fluid" alt="Cinderella in ball gown" loading="lazy">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Cinderella</h5>
+          <p>Kind-hearted girl with a magical transformation and the iconic glass slipper.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://i.pinimg.com/736x/bc/ae/e7/bcaee75e3b366b5738dac3789f43bcba.jpg" class="d-block w-100 img-fluid" alt="Snow White with dwarfs" loading="lazy">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Snow White</h5>
+          <p>The fairest one of all, who lived with seven dwarfs and beat the Evil Queen.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://c4.wallpaperflare.com/wallpaper/310/545/93/rapunzel-water-lilies-rapunzel-a-tangled-tale-wallpaper-preview.jpg" class="d-block w-100 img-fluid" alt="Rapunzel with long hair" loading="lazy">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Rapunzel</h5>
+          <p>Princess with magical long hair, rescued from a tower by true love.</p>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- Accordion Section -->
+  <div class="container my-5" style="max-width: 1140px;">
+    <h2 class="mb-4 text-center">Character Highlights</h2>
+
+    <div class="accordion" id="accordionExample">
+
+      <!-- Item 1 -->
+      <div class="accordion-item mb-3">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+            aria-expanded="true" aria-controls="collapseOne">
+            Who is Cinderella?
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Cinderella is a gentle and kind-hearted girl who overcomes hardship through magic and her own grace.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="accordion-item mb-3">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
+            aria-expanded="false" aria-controls="collapseTwo">
+            What's the story of Snow White?
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Snow White was poisoned by a jealous queen but saved by love and friendship with the seven dwarfs.
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="accordion-item mb-3">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree"
+            aria-expanded="false" aria-controls="collapseThree">
+            Why is Rapunzel unique?
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+          data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            Rapunzel possesses magical long hair and spent her early life in a tower until she escaped and found her destiny.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white pt-4 pb-2 mt-5">
+    <div class="container text-center text-md-start">
+      <div class="row">
+
+        <!-- Column 1 -->
+        <div class="col-md-3 mb-3">
+          <h5 class="text-center text-md-start">FairyTales</h5>
+          <p>Discover the charm and wisdom of timeless fairy tale characters.</p>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="col-md-3 mb-3">
+          <h5 class="text-center text-md-start">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Home</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Characters</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Stories</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="col-md-3 mb-3">
+          <h5 class="text-center text-md-start">Explore</h5>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Gallery</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Events</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="col-md-3 mb-3">
+          <h5 class="text-center text-md-start">Follow Us</h5>
+          <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i> Facebook</a><br>
+          <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i> Twitter</a><br>
+          <a href="#" class="text-white"><i class="bi bi-instagram"></i> Instagram</a>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-3">
+        <small>&copy; 2025 FairyTales. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</body>
+</html>
+<!-- End of HTML Document -->
